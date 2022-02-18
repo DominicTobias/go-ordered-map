@@ -3,11 +3,11 @@ package orderedmap_test
 import (
 	"fmt"
 
-	"github.com/wk8/go-ordered-map"
+	orderedmap "github.com/DominicTobias/go-ordered-map"
 )
 
 func Example() {
-	om := orderedmap.New()
+	om := orderedmap.New[string, string]()
 
 	om.Set("foo", "bar")
 	om.Set("bar", "baz")
@@ -35,7 +35,7 @@ func Example() {
 	// Output:
 	// ## Get operations: ##
 	// bar true
-	// <nil> false
+	//  false
 	// ## Iterating over pairs from oldest to newest: ##
 	// foo => bar
 	// bar => baz
