@@ -66,8 +66,6 @@ func main() {
 }
 ```
 
-All of `OrderedMap`'s methods accept and return `interface{}`s, so you can use any type of keys that regular `map`s accept, as well pack/unpack arbitrary values, e.g.:
-
 ```go
 type myStruct struct {
 	payload string
@@ -83,10 +81,10 @@ func main() {
 	if !present {
 		panic("should be there!")
 	}
-	fmt.Println(value.(*myStruct).payload) // => foo
+	fmt.Println(value.payload) // => foo
 
 	for pair := om.Oldest(); pair != nil; pair = pair.Next() {
-		fmt.Printf("%d => %s\n", pair.Key, pair.Value.(*myStruct).payload)
+		fmt.Printf("%d => %s\n", pair.Key, pair.Value.payload)
 	} // prints:
 	// 12 => foo
 	// 1 => bar
