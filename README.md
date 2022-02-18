@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/wk8/go-ordered-map.svg?branch=master)](https://travis-ci.org/wk8/go-ordered-map)
 
-This is a fork of https://github.com/wk8/go-ordered-map to use generics for performance reasons.
+This is a fork of https://github.com/wk8/go-ordered-map to use generics for performance reasons. As such it requires Go 1.18+.
 
 # Goland Ordered Maps
 
